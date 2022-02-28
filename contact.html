@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The D Restaurant </title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        header{
+            background-color: rgb(0, 0, 0, 0.9);
+            z-index: 1;
+        }
+        .reserv{
+            margin-top: 5%;
+        }
+        .reserv input[type=text], .reserv textarea, .reserv input[type=date], .reserv select, .reserv input[type=submit]{
+            background-color: #f5f5f6;
+            
+            padding: 10px;
+            
+        }
+        .reserv input[type=text], .reserv textarea, .reserv input[type=date], .reserv select, .reserv input[type=submit]{
+            margin-top: 5%;
+            width: 350px;
+        }
+        @media screen and (max-width: 480px) {
+            
+            .eatime img{
+                width: auto;
+                height: 200px;
+            }
+            .menus2{
+                z-index: 999;
+                top: 0pt;
+            }
+            .reserv{
+                margin-top: 8%;
+            }
+        }
+    </style>
+</head>
+
+<body onscroll="makeBlack()" id="bod">
+    <header id="h1">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><h1>The D Restaurant </h1></a>
+            </div>
+            <div class="menus">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="reservation.html">RESERVATIONS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">FB</a>
+                    </li>
+                    <li>
+                        <a href="#">INSTA</a>
+                    </li>
+                    <li>
+                        <a href="#">TW</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger" onclick="openNav()">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            </div>
+    </header>
+
+    <div class="menus2" id="menu2">
+        <div class="close-nav" id="menu2_close" onclick="closeNav()">
+            <div id="line5"></div>
+            <div id="line4"></div>
+        </div>
+        <div class="menus">
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="reservation.html">RESERVATIONS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="eatime"><img src="images/contactus.jpg" alt="nay dsiat"><p>CONTACT US</p></div>
+    <div class="reserv">
+        <h1>Contact via Email</h1>
+        <p>Tell us about your experience <br>share your mamories <br> help us to make other people happy</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Name">  
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="subject" placeholder="Subject">
+
+            <textarea rows="4" name="comment" placeholder="Type your message"></textarea>
+            
+            <br>
+            
+            <input type="submit" id="submit" value="BOOK TABLE">
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="bg-black">
+            <h1 class="name-h1">The D Restaurant</h1>
+            <div class="connect">
+                <div class="connect-blocks">
+                    <h2 class="sub-header">OPEN TIME</h2>
+                    <p class='whiteob'>
+                        Monday - Friday :> 10 am - 12 am <br> Saturday - Sunday :> 7 pm - 1 am <br> Closed on Government
+                        Holiday's
+                    </p>
+                </div>
+                <div class="connect-blocks">
+                    <h2 class="sub-header">CONTACT US</h2>
+                    <p class='whiteob'>
+                        Block No-B 36  <br> Pune, Maharashtra <br> divyasubhash29@gmail<br> +91 1234567890
+                    </p>
+                </div>
+                <div class="connect-blocks">
+                    <h2 class="sub-header">FOLLOW US</h2>
+                    <p class='whiteob'>
+                        Facebook <br> Instagram <br> twitter
+                    </p>
+                </div>
+            </div>
+            <div class="cpr">Copyright © 2022 The D Restaurant India, Inc. All rights reserved</div>
+        </div>
+    </div>
+
+    <script>
+        function closeNav() {
+            var menu = document.getElementById("menu2");
+            menu.style.width = "0";
+            menu.style.boxShadow = "none";
+        }
+        function openNav() {
+            var menu = document.getElementById("menu2");
+            menu.style.width = "60%";
+            menu.style.boxShadow = "-200px 0px rgb(37, 37, 37, 0.8)";
+        }
+        function makeBlack() {
+            
+        }
+
+
+        function myFunction() {
+            var elmnt = document.getElementById("myDIV");
+            var x = elmnt.scrollLeft;
+            var y = elmnt.scrollTop;
+            document.getElementById("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+        }
+    </script>
+</body>
+
+</html>

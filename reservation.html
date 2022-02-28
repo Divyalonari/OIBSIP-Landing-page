@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The D Restaurant </title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        header{
+            background-color: rgb(0, 0, 0, 0.9);
+            z-index: 1;
+        }
+        .reserv{
+            margin-top: 5%;
+        }
+        @media screen and (max-width: 480px) {
+            
+            .eatime img{
+                width: auto;
+                height: 200px;
+            }
+            .menus2{
+                z-index: 999;
+                top: 0pt;
+            }
+            .reserv{
+                margin-top: 8%;
+            }
+        }
+    </style>
+</head>
+
+<body onscroll="makeBlack()" id="bod">
+    <header id="h1">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><h1>The D Restaurant </h1></a>
+            </div>
+            <div class="menus">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="reservation.html">RESERVATIONS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">FB</a>
+                    </li>
+                    <li>
+                        <a href="#">INSTA</a>
+                    </li>
+                    <li>
+                        <a href="#">TW</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger" onclick="openNav()">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            </div>
+    </header>
+
+    <div class="menus2" id="menu2">
+        <div class="close-nav" id="menu2_close" onclick="closeNav()">
+            <div id="line5"></div>
+            <div id="line4"></div>
+
+        </div>
+        <div class="menus">
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="reservation.html">RESERVATIONS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="eatime"><img src="images/reservation.jpg" alt="nay dsiat"><p>RESERVATIONS</p></div>
+    <div class="reserv">
+        <h1>Reservation</h1>
+        <form action="#" method="post">
+            <input type="text" placeholder="Name">  
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Contact">
+            <input placeholder="Date" class="rdate" type="text" onfocus="(this.type='date', this.value='Date')" id="rdate" name="rdate">
+            
+            <br>
+            <select name="time" id="time">
+                <option value="0">Select Time</option> 
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 AM">12:00 PM</option>
+                <option value="01:00 AM">01:00 PM</option>
+                <option value="02:00 AM">02:00 PM</option>
+                <option value="03:00 AM">03:00 PM</option>
+                <option value="04:00 AM">04:00 PM</option>
+                <option value="05:00 AM">05:00 PM</option>
+                <option value="06:00 AM">06:00 PM</option>
+                <option value="07:00 AM">07:00 PM</option>
+                <option value="08:00 AM">08:00 PM</option>
+                <option value="09:00 AM">09:00 PM</option>
+                <option value="10:00 AM">10:00 PM</option>
+                <option value="11:00 AM">11:00 PM</option>
+                
+            </select>
+            <select name="time" id="time">
+                <option value="0">Number of People</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="7">7 People</option>
+                <option value="8">8 People</option>
+                <option value="9">9 People</option>
+                <option value="10">10 People</option>
+                
+            </select>
+            <input type="submit" id="submit" value="BOOK TABLE">
+        </form>
+        
+    </div>
+
+
+    <div class="footer">
+        <div class="bg-black">
+            <h1 class="name-h1">The D Restaurant </h1>
+            <div class="connect">
+                <div class="connect-blocks">
+                    <h2 class="sub-header">OPEN TIME</h2>
+                    <p class='whiteob'>
+                        Monday - Friday :> 10 am - 12 am <br> Saturday - Sunday :> 7 pm - 1 am <br> Closed on Government
+                        Holiday's
+                    </p>
+                </div>
+                <div class="connect-blocks">
+                    <h2 class="sub-header">CONTACT US</h2>
+                    <p class='whiteob'>
+                        Block No-B 36  <br> Pune, Maharashtra <br> divyasubhash29@gmail.com <br> +91 1234567890
+                    </p>
+                </div>
+                <div class="connect-blocks">
+                    <h2 class="sub-header">FOLLOW US</h2>
+                    <p class='whiteob'>
+                        Facebook <br> Instagram <br> twitter
+                    </p>
+                </div>
+            </div>
+            <div class="cpr">Copyright © 2022 The D Restaurant India, Inc. All rights reserved</div>
+        </div>
+    </div>
+
+    <script>
+        function closeNav() {
+            var menu = document.getElementById("menu2");
+            menu.style.width = "0";
+            menu.style.boxShadow = "none";
+        }
+        function openNav() {
+            var menu = document.getElementById("menu2");
+            menu.style.width = "60%";
+            menu.style.boxShadow = "-200px 0px rgb(37, 37, 37, 0.8)";
+        }
+        function makeBlack() {
+            
+        }
+
+
+        function myFunction() {
+            var elmnt = document.getElementById("myDIV");
+            var x = elmnt.scrollLeft;
+            var y = elmnt.scrollTop;
+            document.getElementById("demo").innerHTML = "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+        }
+    </script>
+</body>
+
+</html>
